@@ -4,24 +4,25 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public virtual Position Pos { get; set; }
 
         public class Position
         {
             public int X { get; set; }
             public int Y { get; set; }
-            public override string ToString()
-            {
-                return $"({X},{Y})";
-            }
-        }
 
-        public enum Startype
-        {
-            YellowDwarf, White, BlueNeutron, RedGiant
         }
-        public enum PlanetType
+        public override string ToString()
         {
-            Terrestial, Giant, Dwarf, Gas_Giant
+            return $"({Pos.X},{Pos.Y})";
         }
+        //public enum Startype
+        //{
+        //    YellowDwarf, White, BlueNeutron, RedGiant
+        //}
+        //public enum PlanetType
+        //{
+        //    Terrestial, Giant, Dwarf, Gas_Giant
+        //}
     }
 }

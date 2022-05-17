@@ -2,14 +2,10 @@
 {
     internal sealed class Moon : Planet
     {
-        public Planet Orbeting { get; set; }
-        internal double Distance(Planet.Position planetPos, Moon.Position moonPos)
+        public Planet? Orbeting { get; set; }
+        public double? Distance(Planet planet)
         {
-            planetPos = new();
-            moonPos = new();
-
-            double distance = Math.Sqrt(Math.Pow((moonPos.X - planetPos.X), 2) + Math.Pow((moonPos.Y - planetPos.Y), 2));
-            return distance;
+            return Math.Sqrt(Math.Pow(Pos.X - planet.Pos.X, 2) + Math.Pow(Pos.Y - planet.Pos.Y, 2));
         }
     }
 }
