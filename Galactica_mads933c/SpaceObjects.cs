@@ -16,13 +16,6 @@
         {
             return $"({Pos.X},{Pos.Y})";
         }
-        //public enum Startype
-        //{
-        //    YellowDwarf, White, BlueNeutron, RedGiant
-        //}
-        //public enum PlanetType
-        //{
-        //    Terrestial, Giant, Dwarf, Gas_Giant
-        //}
+
     }
 }

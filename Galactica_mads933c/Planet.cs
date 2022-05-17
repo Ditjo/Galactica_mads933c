@@ -10,13 +10,13 @@
         public int RotationsPeriodeTimer { get; set; }
         public int RevolutionsPeriodeDage { get; set; }
         public PlanetType Type { get; set; }
-        public List<Moon>? Moon { get; set; }
+        public List<Moon>? MoonList { get; set; }
 
 
 
         internal double Distance()
         {
-            return Math.Sqrt(Math.Pow(Pos.X - 0, 2) + Math.Pow(Pos.Y - 0, 2));
+            return Math.Sqrt(Math.Pow(Math.Abs(Pos.X) - 0, 2) + Math.Pow(Math.Abs(Pos.Y) - 0, 2));
         }
     }
 }
